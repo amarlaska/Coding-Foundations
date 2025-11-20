@@ -11,7 +11,7 @@
         src="https://kit.fontawesome.com/8e94fc80d6.js" 
         crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 
 </head>
 
@@ -20,15 +20,19 @@
     <header class="header-bar">
         <!--Columna 1 : Logo-->   
         <div class="logo-col">
-            <img src="https://assets.codepen.io/t-1/codepen-logo.svg" 
+            <img src="images/codepen-wordmark-display-inside-white@10x.png" 
                 alt="CodePen Logo as SVG" class="logo" >
         </div>
         <!--Columna 2: Menú -->
         <nav class="menu-col">
-            <a href="#">Pens</a>
-            <a href="#">Projects</a>
-            <a href="#">Posts</a>
-            <a href="#">Collections</a>
+            <span class="explore">EXPLORE</span>
+
+            <div class="menu-row">
+                <a href="#">Pens</a>
+                <a href="#">Projects</a>
+                <a href="#">Posts</a>
+                <a href="#">Collections</a>
+            </div>
         </nav>
         <!--Columna 3: Dropdow Sparks-->
         <div class="sparks-col">
@@ -36,9 +40,13 @@
         </div>
         <!-- Columna 4: Controles derechos -->
         <div class="right-controls">
-            <button class="create">Create ▾</button>
+            <button class="create">
+                Create <span class="triangle">▾</span>
+            </button>
 
-            <span class="search-icon">🔍</span>
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
 
             <div class="button-group">
                 <button class="login">Log In</button>
