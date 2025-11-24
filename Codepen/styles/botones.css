@@ -1,0 +1,30 @@
+/* Botones debajo del texto */
+
+.left-col > .buttons2 {
+    display: flex;
+    gap: 20px;
+    padding: 0 0 60px 0;
+}
+
+.sign-up-for-free {
+    margin-top: auto;
+    padding: 15px 25px;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #4BCE79;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+}
+
+.learn-more {
+    margin-top: auto;
+    padding: 15px 25px;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: black;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}

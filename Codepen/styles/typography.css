@@ -1,0 +1,32 @@
+.left-col > .text-block > .paragraf1 p {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: #A7A7A7;
+    font-family: 'Lato', sans-serif;
+}
+
+.left-col > .text-block > .paragraf1 p > .bold {
+    font-weight: 600;
+    color: white;
+}
+
+.left-col > .text-block > .paragraf2 p {
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: #A7A7A7;
+    font-family: 'Lato', sans-serif;
+}
+
+.right-col > .image-text p {
+    font-size: 15px;
+    color: white;
+    font-family: 'Loto', sans-serif;
+}
+
+.right-col > .image-text p > .blue-text {
+    color: #74D2F4;
+}

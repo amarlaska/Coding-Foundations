@@ -1,133 +1,14 @@
-/* ====================== */
-/*      HEADER BAR        */
-/* ====================== */
-
-.header-bar {
-    display: grid;
-    grid-template-columns: auto max-content auto auto; /* logo - menu-col - sparks-col - right-controls */
-    align-items: center;
-    column-gap: 0;           /* controlaremos con padding/margin */
-    height: 100px;
-    padding: 0 20px;
-    background-color: black;
-    color: #cbcbcb;
-}
-
-.header-bar > .logo-col img {
-    height: 45px;
-    display: block;
-}
-
-/* MENU-COL */
-.header-bar > .menu-col {
-    display: flex;
-    flex-direction: column;  
-    justify-content: center;     
-    align-items: flex-start;    
-    gap: 5px;
-    margin-left: 30px;         /* separación del logo */
-    width: max-content;         /* que solo ocupe lo que necesita */
-}
-
-/* Explore */
-.menu-col > .explore {
-    font-weight: 700;
-    color: rgb(220, 220, 12);
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
-}
-
-/* Fila de enlaces debajo */
-.menu-row {
-    display: flex;
-    gap: 15px;
-}
-
-.menu-row a {
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
-}
-
-/* SPARKS-COL */
-.header-bar > .sparks-col {
-    display: flex;
-    align-items: flex-start;       /* alineado arriba del menu-col */
-    margin-left: 25px;             /* separación del menu-col */
-                                    /* alineamos verticalmente con menu-row usando margin-top */
-    margin-top: 28px;              /* ajustar según altura de menu-row */
-}
-
-.header-bar > .sparks-col a {
-    font-weight: 700;
-    color: rgb(199, 198, 198);
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
-}
-
-/* Right controls */
-.header-bar > .right-controls {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-left: 400px;             /* separación respecto de sparks-col */
-}
-
-/* Botones de right-controls */
-
-.search-icon {
-    font-size: 30px;
-}
-
-.search-icon {
-    display: flex;
-    gap: 18px;   /* ahora hay más espacio entre Log In y Sign Up */
-}
-
-.create {
-    padding: 10px 10px 10px 18px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.create > .triangle {
-    color: #47cf73; /* verde */
-    font-size: 25px;
-    margin-left: 4px;
-}
-
-.button-group {
-    display: flex;
-    gap: 15px;   /* ahora hay más espacio entre Log In y Sign Up */
-}
-
-.button-group button {
-    padding: 15px 20px 15px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.create, .login, .signup {
-    background-color: #8a8989;
-    color: white;
-    font-weight: 700;
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-}
-
 /* Principal */
 
 .principal {
     display: flex;
-    gap: 20px;
-    padding: 40px 20px;
+    gap: 0;
+    padding: 0px 20px;
     align-items: flex-start;
-    background-color: #0c0909d6;
+    margin-left: -15px;
+    margin-right: -20px;
+    padding: 0 0 20px 0; 
+    background-color: #2F323A;
 }
 
 .principal > .left-col {
@@ -137,62 +18,80 @@
     justify-content: center;
     margin-right: 150px;
     margin-left: 50px;
+    background: radial-gradient(circle at top center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.05) 30%, rgba(0,0,0,0) 50%);
+    overflow: hidden;
+}
+
+.left-column::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    backdrop-filter: blur(100px); /* suaviza el gradiente */
+    z-index: 1;
 }
 
 .principal > .left-col > .text-block {
     max-width: auto;
 }
 
-.left-col > .text-block > .paragraf1, .paragraf2 p {
-    font-size: 50px;
-    font-weight: 300;
-    line-height: 1.4;
-    margin-bottom: 15px;
-    color: whitesmoke;
-    font-family: 'Lato', sans-serif;
-}
-
-/* Botones debajo del texto */
-
-.left-col > .buttons2 {
-    display: flex;
-    gap: 20px;
-}
-
-.sign-up-for-free {
-    margin-top: auto;
-    padding: 15px 25px;
-    font-size: 25px;
-    font-weight: 600;
-    background-color: #50f273d6;
-    border: none;
-    border-radius: 4px;
-    font-family: 'Lato', sans-serif;
-}
-
-.learn-more {
-    margin-top: auto;
-    padding: 15px 25px;
-    font-size: 25px;
-    font-weight: 600;
-    background-color: black;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-family: 'Lato', sans-serif;
-}
-
 .right-col {
-    flex: display;
     justify-content: center;
+    padding: 25px 0 0 0;
+    margin-right: -20px;
+    margin-bottom: -8px;
+    position: relative;
+    z-index: 1;
 }
 
-.right-col p {
-    font-size: 18px;
-    color: white;
-    font-family: 'Loto', sans-serif;
+.right-col::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80px;   /* IMPORTANTE: mueve el degradado un poco hacia la izquierda para que se solape bien */
+    width: 150%;  
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(47,50,58,0) 0%,      /* coincide exactamente con el final visual de tu left-col */
+        rgba(0,0,0,0.6) 50%,      /* empieza a oscurecer */
+        rgba(0,0,0,1) 100%        /* negro completo al final */
+    );
+    pointer-events: none;
+    z-index: -1;
 }
 
 .right-col img {
-    width: 600px;
+    width: 100%;
+    height: 100%;
+    margin-top: -10px;
 }
+
+/*BANDA CODEPEN FOR...*/
+
+.code-banda {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: #36383F; /* color de fondo de la banda */
+}
+.code-banda > .code-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    border: #606162 solid 2px;
+}
+
+.code-banda > .code-item a {
+    text-decoration: none;
+    font-size: 25px;;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.code-banda > .code-item > .band-link > .bold {
+    font-weight: 1000;
+}
+
